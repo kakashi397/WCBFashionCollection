@@ -2,6 +2,17 @@
 const loadingAreaGrey = document.querySelector('.js-loading');
 
 window.addEventListener('load', () => {
-  // loadingが終わった時の処理
-  loadingAreaGrey.animete(動かす内容, 動きの詳細);
+  // ローディング中（グレースクリーン）
+  loadingAreaGrey.animate(
+    {
+      opacity: [1, 0],
+      visibility: 'hidden',
+    },
+    {
+      duration: 2000,
+      delay: 1200,
+      easing: 'ease',
+      fill: 'forwards',
+    }
+  );
 });
