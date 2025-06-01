@@ -1,0 +1,14 @@
+@use './variables' as v;
+
+/* base */
+body {
+  color: v.$brown;
+  background: url('../../images/bg-shadow.jpg') no-repeat right bottom / cover fixed; 
+  text-align: center;
+}
+p {
+  line-height: 1.7;
+}
+img {
+  max-width: 100%;
+}
