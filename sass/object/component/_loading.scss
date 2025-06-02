@@ -15,4 +15,8 @@
     z-index: 9998;
     translate: 0 100vh;
   }
+  &__text {
+    font-size: 2rem;
+    font-family: v.$oswald-font;
+  }
 }
