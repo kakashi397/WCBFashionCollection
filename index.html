@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
+  <script src="js/dev-tools.js" defer></script>
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -21,5 +22,19 @@
   <section class="p-hero">
     <h1 class="p-hero__title">WCB Fashion<br>Collection</h1><!-- /.hero__title -->
   </section><!-- /.hero -->
+
+  <section class="p-gallery">
+    <div class="p-gallery__image">
+      <img src="images/img1.jpg" alt="">
+    </div><!-- /.p-gallery__image -->
+    <div class="p-gallery__content l-wrapper">
+      <h2 class="p-gallery__title">Lookbook</h2>
+      <!-- /.p-gallery__title -->
+      <ul class="p-gallery__thumbnails">
+        <!-- このul要素は JavaScript によって <li><img src="images/img〇.jpg" alt=""></li> を動的に9個生成して挿入しています -->
+      </ul>
+      <!-- /.p-gallery__thumbnails -->
+    </div><!-- /.p-gallery__content l-wrapper -->
+  </section><!-- /.p-gallery -->
 </body>
 </html>
