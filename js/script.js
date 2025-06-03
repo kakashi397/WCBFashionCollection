@@ -57,9 +57,16 @@ window.addEventListener('load', () => {
 const mainImage = document.querySelector('.js-mainImage');
 const thumbnails = document.querySelectorAll('.js-thumbnails');
 
-for(let i = 0; i < thumbnails.length; i++) {
-  thumbnails[i].addEventListener('mouseover', (event) => {
+// for(let i = 0; i < thumbnails.length; i++) {
+//   thumbnails[i].addEventListener('mouseover', (event) => {
+//     mainImage.src = event.target.src;
+//     mainImage.animate({opacity: [0, 1]}, 500);
+//   });
+// };
+
+thumbnails.forEach((thumbnail) => {
+  thumbnail.addEventListener('mouseover', (event) => {
     mainImage.src = event.target.src;
     mainImage.animate({opacity: [0, 1]}, 500);
   });
-};
+});
