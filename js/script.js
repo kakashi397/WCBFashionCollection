@@ -54,11 +54,11 @@ window.addEventListener('load', () => {
 
 
 /* gallery */
-const mainImage = document.querySelector('.p-gallery__image img');
-const thumbImages = document.querySelectorAll('.p-gallery__thumbnails img');
+const mainImage = document.querySelector('.js-mainImage');
+const thumbnails = document.querySelectorAll('.js-thumbnails');
 
-for(let i = 0; i < thumbImages.length; i++) {
-  thumbImages[i].addEventListener('mouseover', (event) => {
+for(let i = 0; i < thumbnails.length; i++) {
+  thumbnails[i].addEventListener('mouseover', (event) => {
     mainImage.src = event.target.src;
     mainImage.animate({opacity: [0, 1]}, 500);
   });

@@ -4,9 +4,9 @@
  */
 
 // galleryセクションのli要素を生成するスクリプト
-const thumbnails = document.querySelector('.p-gallery__thumbnails');
+const thumbnails = document.querySelector('.js-generateThumbnails');
 
 for (let i = 1; i < 10; i++) {
-  const content = `<li><img src="images/img${i}.jpg" alt=""></li>`;
+  const content = `<li><img class="js-thumbnails" src="images/img${i}.jpg" alt=""></li>`;
   thumbnails.insertAdjacentHTML('beforeend', content);
 };

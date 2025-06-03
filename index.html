@@ -25,13 +25,13 @@
 
   <section class="p-gallery">
     <div class="p-gallery__image">
-      <img src="images/img1.jpg" alt="">
+      <img class="js-mainImage" src="images/img1.jpg" alt="">
     </div><!-- /.p-gallery__image -->
     <div class="p-gallery__content l-wrapper">
       <h2 class="p-gallery__title">Lookbook</h2>
       <!-- /.p-gallery__title -->
-      <ul class="p-gallery__thumbnails">
-        <!-- このul要素は JavaScript によって <li><img src="images/img〇.jpg" alt=""></li> を動的に9個生成して挿入しています -->
+      <ul class="p-gallery__thumbnails js-generateThumbnails">
+        <!-- このul要素は JavaScript によって <li><img class="js-thumbnails" src="images/img〇.jpg" alt=""></li> を動的に9個生成して挿入しています -->
       </ul><!-- /.p-gallery__thumbnails -->
     </div><!-- /.p-gallery__content l-wrapper -->
   </section><!-- /.p-gallery -->
