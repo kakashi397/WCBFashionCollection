@@ -1,0 +1,66 @@
+@use '../../foundation/variables' as v;
+@use '../../foundation/mixin' as m;
+
+/* gallery */
+
+.p-gallery {
+  display: flex;
+  flex-direction: column-reverse;
+  @include m.media(pc) {
+    flex-direction: row;
+  }
+  &__image {
+    width: min(100%, calc(38rem - 2rem));
+    margin: auto;
+    position: relative;
+    @include m.media(pc) {
+      width: 50vw;
+      margin: 0;
+    }
+    &::after {
+      display: block;
+      content: '';
+      width: calc(100% - 2rem);
+      height: calc(100% - 2.5rem);
+      z-index: 3;
+      border: 3px solid v.$white;
+      top: 1rem;
+      left: 1rem;
+      position: absolute;
+    }
+    & img {
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      width: 100%;
+      @include m.media(pc) {
+        height: 100vh;
+      }
+    }
+  }
+  &__thumbnails {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 1rem 0;
+    @include m.media(pc) {
+      gap: 2vw;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    & img {
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      cursor: pointer;
+      &:hover {
+        @include m.media(pc) {
+          box-shadow: 0 0 1rem rgba(0,0,0,.4);
+          transition: .4s;
+        }
+      }
+    }
+  }
+  &__content {
+    @include m.media(pc) {
+      width: 30vw;
+    }
+  }
+}
