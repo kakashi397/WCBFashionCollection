@@ -59,6 +59,6 @@ const thumbImages = document.querySelectorAll('.p-gallery__thumbnails img');
 
 for(let i = 0; i < thumbImages.length; i++) {
   thumbImages[i].addEventListener('mouseover', () => {
-    console.log(thumbImages[i]);
+    mainImage.animate({opacity: [0, 1]}, 500);
   });
 };
