@@ -51,3 +51,14 @@ window.addEventListener('load', () => {
     }
   );
 });
+
+
+/* gallery */
+const mainImage = document.querySelector('.p-gallery__image img');
+const thumbImages = document.querySelectorAll('.p-gallery__thumbnails img');
+
+for(let i = 0; i < thumbImages.length; i++) {
+  thumbImages[i].addEventListener('mouseover', () => {
+    console.log(thumbImages[i]);
+  });
+};
