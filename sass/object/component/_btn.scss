@@ -1,0 +1,11 @@
+@use '../../foundation/variables' as v;
+
+/* c-btn */
+.c-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid v.$brown;
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  transition: .4s;
+}
