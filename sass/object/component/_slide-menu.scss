@@ -1,0 +1,55 @@
+@use '../../foundation/variables' as v;
+
+/* スライドメニュー */
+// 開閉ボタン
+.btn-menu {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  z-index: 4;
+  padding: 0.5rem 1rem;
+  border: 1px solid v.$brown;
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  transition: .4s;
+  & svg {
+    fill: v.$brown;
+    margin-top: .25rem;
+    height: 2rem;
+    width: 2rem;
+  }
+}
+
+// 閉じるボタン
+#menu-close {
+  border: 1px solid v.$light-green;
+  & svg {
+    fill: v.$light-green;
+  }
+}
+
+// スライドメニュー
+#menu-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 4;
+  padding: 8rem 2rem 2rem;
+  width: max(32vw, 20rem);
+  height: 100vh;
+  background-color: v.$brown;
+  box-shadow: 0 0 2rem v.$brown;
+  font-family: v.$oswald-font;
+}
+.menu-list {
+  list-style: none;
+  & li {
+    margin: 1.5rem 0;
+  }
+  & a {
+    color: v.$light-green;
+    text-decoration: none;
+    font-size: 2rem;
+  }
+}
