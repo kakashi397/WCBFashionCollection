@@ -79,8 +79,8 @@ menuOpen.addEventListener('click', () => {
   menuPanel.animate({translate: ['100vw', 0]}, menuOptions);
   
   // リンクをひとつずつ順に表示
-  menuItems.forEach((menuItem) => {
-    // console.log(menuItem);
+  menuItems.forEach((menuItem, index) => {
+    // console.log(`${index}番目のリスト`);
     menuItem.animate(
       {
         opacity: [0, 1],
@@ -88,6 +88,7 @@ menuOpen.addEventListener('click', () => {
       },
       {
         duration: 2400,
+        delay: 300 * index,
         easing: 'ease',
         fill: 'forwards',
       },
@@ -98,5 +99,8 @@ menuOpen.addEventListener('click', () => {
 // menuを閉じる
 menuClose.addEventListener('click', () => {
   menuPanel.animate({translate: [0, '100vw']}, menuOptions);
+  menuItems.forEach((menuItem) => {
+    menuItem.animate({opacity: [1, 0]}, menuOptions);
+  });
 });
 
