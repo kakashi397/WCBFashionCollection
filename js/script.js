@@ -3,7 +3,6 @@ const loadingAreaGrey = document.querySelector('.js-loading-fadeout');
 const loadingAreaGreen = document.querySelector('.js-loading-slideout');
 const loadingText = document.querySelector('.js-loading-message-fadeout');
 
-
 window.addEventListener('load', () => {
   // ローディング中（グレースクリーン）
   loadingAreaGrey.animate(
@@ -68,6 +67,7 @@ thumbnails.forEach((thumbnail) => {
 const menuOpen = document.querySelector('.js-menu-open');
 const menuClose = document.querySelector('.js-menu-close');
 const menuPanel = document.querySelector('.js-menu-panel');
+menuItems = document.querySelectorAll('.p-slide-menu__item');
 const menuOptions = {
   duration: 1400,
   easing: 'ease',
@@ -76,10 +76,27 @@ const menuOptions = {
 
 // menuを開く
 menuOpen.addEventListener('click', () => {
-  // console.log('メニューを開く');
   menuPanel.animate({translate: ['100vw', 0]}, menuOptions);
+  
+  // リンクをひとつずつ順に表示
+  menuItems.forEach((menuItem) => {
+    // console.log(menuItem);
+    menuItem.animate(
+      {
+        opacity: [0, 1],
+        translate: ['2rem', 0],
+      },
+      {
+        duration: 2400,
+        easing: 'ease',
+        fill: 'forwards',
+      },
+    );
+  });
 });
+
 // menuを閉じる
 menuClose.addEventListener('click', () => {
   menuPanel.animate({translate: [0, '100vw']}, menuOptions);
 });
+
