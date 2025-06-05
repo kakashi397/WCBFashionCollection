@@ -57,16 +57,29 @@ window.addEventListener('load', () => {
 const mainImage = document.querySelector('.js-mainImage');
 const thumbnails = document.querySelectorAll('.js-thumbnails');
 
-// for(let i = 0; i < thumbnails.length; i++) {
-//   thumbnails[i].addEventListener('mouseover', (event) => {
-//     mainImage.src = event.target.src;
-//     mainImage.animate({opacity: [0, 1]}, 500);
-//   });
-// };
-
 thumbnails.forEach((thumbnail) => {
   thumbnail.addEventListener('mouseover', (event) => {
     mainImage.src = event.target.src;
     mainImage.animate({opacity: [0, 1]}, 500);
   });
+});
+
+/* slideMenu */
+const menuOpen = document.querySelector('.js-menu-open');
+const menuClose = document.querySelector('.js-menu-close');
+const menuPanel = document.querySelector('.js-menu-panel');
+const menuOptions = {
+  duration: 1400,
+  easing: 'ease',
+  fill: 'forwards',
+};
+
+// menuを開く
+menuOpen.addEventListener('click', () => {
+  // console.log('メニューを開く');
+  menuPanel.animate({translate: ['100vw', 0]}, menuOptions);
+});
+// menuを閉じる
+menuClose.addEventListener('click', () => {
+  menuPanel.animate({translate: [0, '100vw']}, menuOptions);
 });
