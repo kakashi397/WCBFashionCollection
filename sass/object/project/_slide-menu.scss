@@ -1,7 +1,7 @@
 @use '../../foundation/variables' as v;
 
 /* slide menu */
-// 開閉ボタン
+/* 開閉ボタン */
 .p-slide-menu {
   &__btn {
     position: fixed;
@@ -14,35 +14,36 @@
       height: 2rem;
       width: 2rem;
     }
-  }
-  // 閉じるボタン
-  &.c-btn-round--close svg {
-    fill: v.$light-green;
+    &.c-btn-round--close svg {
+      fill: v.$light-green;
+    }
   }
 }
 
 
-// スライドメニュー
-#menu-panel {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 4;
-  padding: 8rem 2rem 2rem;
-  width: max(32vw, 20rem);
-  height: 100vh;
-  background-color: v.$brown;
-  box-shadow: 0 0 2rem v.$brown;
-  font-family: v.$oswald-font;
-}
-.menu-list {
-  list-style: none;
-  & li {
-    margin: 1.5rem 0;
+/* スライドメニューパネル */
+.p-slide-menu {
+  &__panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    padding: 8rem 2rem 2rem;
+    width: max(32vw, 20rem);
+    height: 100vh;
+    background-color: v.$brown;
+    box-shadow: 0 0 2rem v.$brown;
+    font-family: v.$oswald-font;
   }
-  & a {
-    color: v.$light-green;
-    text-decoration: none;
-    font-size: 2rem;
+  &__list {
+    list-style: none;
+  }
+  &__item {
+      margin: 1.5rem 0;
+    & a {
+      color: v.$light-green;
+      text-decoration: none;
+      font-size: 2rem;
+    }
   }
 }
