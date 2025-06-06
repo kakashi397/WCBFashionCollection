@@ -26,7 +26,7 @@ window.addEventListener('load', () => {
     {
       duration: 2000,
       delay: 800,
-      eading: 'eaase',
+      eading: 'ease',
       fill: 'forwards',
     }
   );

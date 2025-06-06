@@ -2,5 +2,7 @@
 @use "./layout/wrapper";
 @use "./object/component/_loading.scss";
 @use "./object/component/btn";
-@use "./object/project/gallery";
+@use "./object/component/fadein";
 @use "./object/project/slide-menu";
+@use "./object/project/hero";
+@use "./object/project/gallery";
