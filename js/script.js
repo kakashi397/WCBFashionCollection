@@ -104,3 +104,21 @@ menuClose.addEventListener('click', () => {
   });
 });
 
+/* fadein */
+// 監視対象が範囲内に現れたら実行する動作
+const animateFade = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+    // console.log(entry.target);
+    }
+  });
+};
+
+// 監視設定
+const fadeObserver = new IntersectionObserver(animateFade);
+
+// .fadeinを監視するよう指示
+const fadeElements = document.querySelectorAll('.js-fadein');
+fadeElements.forEach((fadeElement) => {
+  fadeObserver.observe(fadeElement);
+});
