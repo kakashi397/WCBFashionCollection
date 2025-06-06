@@ -1,0 +1,24 @@
+@use "../../foundation/variables" as v;
+
+/* shop */
+.p-shop {
+  background: url('../../../images/bg-shop.jpg') no-repeat center top / cover;
+  margin-top: 16rem;
+  position: relative;
+  height: 40rem;
+  &__content {
+    background: v.$white;
+    padding: 3rem;
+    position: absolute;
+    top: -8rem;
+    width: 90vw;
+    left: 0;
+    right: 0;
+  }
+  &__store-name {
+    margin: 1rem 0;
+    padding-top: 2rem;
+    font-weight: normal;
+    border-top: 1px solid v.$light-grey;
+  }
+}
