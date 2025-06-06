@@ -1,4 +1,5 @@
 @use '../../foundation/variables' as v;
+@use '../../foundation/mixin' as m;
 
 /* slide menu */
 /* 開閉ボタン */
@@ -13,6 +14,11 @@
       margin-top: .25rem;
       height: 2rem;
       width: 2rem;
+    }
+    &.c-btn-round--close:hover svg {
+      @include m.media(pc) {
+        fill: v.$brown;
+      }
     }
     &.c-btn-round--close svg {
       fill: v.$light-green;
@@ -46,6 +52,12 @@
       color: v.$light-green;
       text-decoration: none;
       font-size: 2rem;
+      &:hover {
+        @include m.media(pc) {
+          transition: .4s;
+          color: v.$green;
+        }
+      }
     }
   }
 }

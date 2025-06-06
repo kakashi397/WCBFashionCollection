@@ -1,5 +1,12 @@
+@use '../../foundation/mixin' as m;
+
 /* title */
 .c-title {
   font-size: min(10vw, 4rem);
   margin-bottom: 2rem;
+  @include m.media(pc) {
+    .c-title {
+      margin-bottom: 3rem;
+    }
+  }
 }

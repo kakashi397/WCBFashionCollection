@@ -1,4 +1,5 @@
 @use '../../foundation/variables' as v;
+@use '../../foundation/mixin' as m;
 
 /* c-btn-round */
 .c-btn-round {
@@ -8,10 +9,16 @@
   height: 4rem;
   width: 4rem;
   transition: .4s;
+  &:hover {
+    @include m.media(pc) {
+      background-color: v.$light-green;
+    }
+  }
   &--close {
     border: 1px solid v.$light-green;
   }
 }
+
 
 .c-btn {
   border: 1px solid v.$brown;

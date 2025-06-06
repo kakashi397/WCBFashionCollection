@@ -1,4 +1,5 @@
 @use "../../foundation/variables" as v;
+@use "../../foundation/mixin" as m;
 
 /* shop */
 .p-shop {
@@ -6,6 +7,10 @@
   margin-top: 16rem;
   position: relative;
   height: 40rem;
+  @include m.media(pc) {
+    margin-top: 20rem;
+    height: 50rem;
+  }
   &__content {
     background: v.$white;
     padding: 3rem;
@@ -26,5 +31,9 @@
     background: v.$brown;
     padding: 1rem;
     margin: 2rem 0;
+    &:hover {
+      color: v.$brown;
+      background: v.$light-green;
+    }
   }
 }
