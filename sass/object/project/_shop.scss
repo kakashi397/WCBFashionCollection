@@ -21,4 +21,10 @@
     font-weight: normal;
     border-top: 1px solid v.$light-grey;
   }
+  &__btn {
+    color: v.$white;
+    background: v.$brown;
+    padding: 1rem;
+    margin: 2rem 0;
+  }
 }

@@ -14,5 +14,8 @@
 }
 
 .c-btn {
-
+  border: 1px solid v.$brown;
+  text-decoration: none;
+  display: inline-block;
+  transition: .4s;
 }
