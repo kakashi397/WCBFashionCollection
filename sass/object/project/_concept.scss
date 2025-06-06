@@ -1,0 +1,17 @@
+@use '../../foundation/variables' as v;
+
+/* concept */
+.p-concept {
+  margin: 8rem 0;
+  background-image: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 20%,
+    v.$light-grey 20%,
+    v.$light-grey 100%
+    );
+  &__description {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+}
