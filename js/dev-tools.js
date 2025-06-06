@@ -7,6 +7,6 @@
 const generateThumbnails = document.querySelector('.js-generateThumbnails');
 
 for (let i = 1; i < 10; i++) {
-  const content = `<li><img class="js-thumbnails" src="images/img${i}.jpg" alt=""></li>`;
+  const content = `<li><img class="js-thumbnails js-fadein" src="images/img${i}.jpg" alt=""></li>`;
   generateThumbnails.insertAdjacentHTML('beforeend', content);
 };
